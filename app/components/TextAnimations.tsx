@@ -24,7 +24,7 @@ export function TextAnimations() {
 
             observer.unobserve(entry.target);
             const target = entry.target as HTMLElement;
-            target.classList.add("text-focus-in");
+            target.classList.add("text-pop-up-left");
             target.addEventListener(
               "animationend",
               () => target.style.removeProperty("will-change"),
@@ -36,7 +36,7 @@ export function TextAnimations() {
       );
 
       targets.forEach((target) => {
-        target.style.willChange = "filter, opacity";
+        target.style.willChange = "transform, text-shadow";
         observerRef.current?.observe(target);
       });
     };

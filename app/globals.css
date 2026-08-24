@@ -336,15 +336,15 @@ h1 em, h2 em { color: var(--green-bright); font-style: normal; }
 
 @-webkit-keyframes text-pop-up-left {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(18px);
+    transform: translateX(18px);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     text-shadow: none;
   }
   100% {
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     text-shadow: 0 10px 24px rgba(8, 27, 42, .18);
@@ -353,19 +353,24 @@ h1 em, h2 em { color: var(--green-bright); font-style: normal; }
 
 @keyframes text-pop-up-left {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(18px);
+    transform: translateX(18px);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     text-shadow: none;
   }
   100% {
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     text-shadow: 0 10px 24px rgba(8, 27, 42, .18);
   }
+}
+
+main h1, main h2, main h3, main p {
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .reveal { animation: reveal .7s ease both; }

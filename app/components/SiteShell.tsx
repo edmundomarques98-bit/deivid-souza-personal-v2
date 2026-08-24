@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowIcon } from "./Icons";
 import { NameIntro } from "./NameIntro";
+import { TextAnimations } from "./TextAnimations";
 import { assetPath } from "../lib/assets";
 import { whatsappLink } from "../lib/contact";
 
@@ -20,6 +21,7 @@ export function SiteShell({ children, active }: { children: ReactNode; active: N
   return (
     <>
       <NameIntro />
+      <TextAnimations />
       <header className="site-header">
         <div className="container header-inner">
           <Link href="/" className="brand" aria-label="Deivid Souza — página inicial">

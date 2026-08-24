@@ -24,7 +24,7 @@ export function TextAnimations() {
 
             observer.unobserve(entry.target);
             const target = entry.target as HTMLElement;
-            target.classList.add("focus-in-expand-fwd");
+            target.classList.add("text-focus-in");
             target.addEventListener(
               "animationend",
               () => target.style.removeProperty("will-change"),
@@ -36,7 +36,7 @@ export function TextAnimations() {
       );
 
       targets.forEach((target) => {
-        target.style.willChange = "transform, filter, opacity, letter-spacing";
+        target.style.willChange = "filter, opacity";
         observerRef.current?.observe(target);
       });
     };

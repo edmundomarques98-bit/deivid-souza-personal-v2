@@ -15,6 +15,7 @@ export function NameIntro() {
   useEffect(() => {
     if (introPlayedInThisView) {
       setPhase("gone");
+      window.dispatchEvent(new Event("deivid:intro-complete"));
       return;
     }
 
@@ -22,11 +23,15 @@ export function NameIntro() {
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setPhase("gone");
+      window.dispatchEvent(new Event("deivid:intro-complete"));
       return;
     }
 
     const leaveTimer = window.setTimeout(() => setPhase("leaving"), 2550);
-    const removeTimer = window.setTimeout(() => setPhase("gone"), 3050);
+    const removeTimer = window.setTimeout(() => {
+      setPhase("gone");
+      window.dispatchEvent(new Event("deivid:intro-complete"));
+    }, 3050);
 
     return () => {
       window.clearTimeout(leaveTimer);

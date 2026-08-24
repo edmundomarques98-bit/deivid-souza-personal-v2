@@ -294,6 +294,8 @@ h1 em, h2 em { color: var(--green-bright); font-style: normal; }
 .shadow-drop-2-left {
   -webkit-animation: shadow-drop-2-left .4s cubic-bezier(.25, .46, .45, .94) both;
   animation: shadow-drop-2-left .4s cubic-bezier(.25, .46, .45, .94) both;
+  -webkit-animation-delay: 3.05s;
+  animation-delay: 3.05s;
   will-change: transform, box-shadow;
 }
 
